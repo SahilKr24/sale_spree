@@ -14,7 +14,7 @@ class _LayoutState extends State<Layout> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 15),
         width: double.infinity,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

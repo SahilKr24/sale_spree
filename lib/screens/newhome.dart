@@ -4,8 +4,6 @@ import 'onwatch.dart';
 import '../components/drawer.dart';
 import 'package:sale_spree/constants.dart';
 import 'layout.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:sale_spree/screens/loginpage.dart';
 
 int _currentIndex = 0;
 bool login = true;
@@ -89,6 +87,7 @@ class _NewHomeState extends State<NewHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       key: _scaffoldKey,
       drawer: HamburgerMenu(),
       body: SafeArea(
@@ -101,9 +100,9 @@ class _NewHomeState extends State<NewHome> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.fromLTRB(10, 0, 0, 5),
+                    padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
                     child: Text(
-                      login?'Welcome back,\nSahil':'Welcome,\nGuest',
+                      login ? 'Welcome back,\nSahil' : 'Welcome,\nGuest',
                       textScaleFactor: 2,
                     ),
                   ),
@@ -114,7 +113,7 @@ class _NewHomeState extends State<NewHome> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) =>LoginPage()),
+                          MaterialPageRoute(builder: (context) => OnWatch()),
                         );
                       },
                     ),
@@ -122,11 +121,26 @@ class _NewHomeState extends State<NewHome> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 6,
-            ),
             Padding(
-              padding: EdgeInsets.fromLTRB(30, 0, 0, 5),
+              padding: const EdgeInsets.symmetric(horizontal:30.0),
+              child: TextField(
+                    decoration: InputDecoration(
+                      labelText: 'Search',
+                      labelStyle: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+            ),
+            SizedBox(height: 10,),
+            Padding(
+              padding: EdgeInsets.fromLTRB(30, 0, 0, 2),
               child: Row(
                 children: <Widget>[
                   Text(
@@ -137,8 +151,10 @@ class _NewHomeState extends State<NewHome> {
                       fontWeight: FontWeight.w900,
                     ),
                   ),
-                  Icon(Icons.arrow_downward,
-                  size: 16,),
+                  Icon(
+                    Icons.arrow_downward,
+                    size: 16,
+                  ),
                 ],
               ),
             ),

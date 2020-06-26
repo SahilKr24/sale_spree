@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -175,21 +174,21 @@ class _DetailScreenState extends State<DetailScreen> {
                 ),
               ),
               SizedBox(
-                height: 24,
+                height: 12,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 32),
                 child: Text(
                   "Prices across sites",
                   style: GoogleFonts.poppins(
-                      fontSize: 18, fontWeight: FontWeight.w600),
+                      fontSize: 20, fontWeight: FontWeight.w600),
                 ),
               ),
               SizedBox(
-                height: 16,
+                height: 8,
               ),
               Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 32),
+                  padding: const EdgeInsets.symmetric(horizontal: 42),
                   child: Column(
                     children: [
                       priceElement(context,
@@ -203,6 +202,31 @@ class _DetailScreenState extends State<DetailScreen> {
                           price: widget.item.snapdeal)
                     ],
                   )),
+              Spacer(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32),
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      "Reviews  ",
+                      style: GoogleFonts.poppins(
+                          fontSize: 20, fontWeight: FontWeight.w600),
+                    ),
+                    Icon(Icons.star,size: 14),
+                    Icon(Icons.star,size: 14),
+                    Icon(Icons.star,size: 14),
+                    Icon(Icons.star,size: 14),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32),
+                child: Text(
+                  "> ${widget.item.reviews}",
+                  style: GoogleFonts.poppins(
+                      fontSize: 16, fontWeight: FontWeight.w500),
+                ),
+              ),
               Spacer(),
               Container(
                 width: double.infinity,
@@ -221,7 +245,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         Text(
                           "Like it?",
                           style: GoogleFonts.poppins(
-                              fontSize: 14, fontWeight: FontWeight.w600),
+                              fontSize: 16, fontWeight: FontWeight.w600),
                         ),
                         Container(
                           height: 40.0,
