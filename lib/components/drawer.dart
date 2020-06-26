@@ -10,13 +10,18 @@ class HamburgerMenu extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.grey,
             ),
-            accountName: Text("Username"),
+            accountName: Text("username"),
             accountEmail: Text("user@email.com"),
             currentAccountPicture: CircleAvatar(
               backgroundColor: Colors.white,
               child: Icon(Icons.person,
               size: 30,),
             ),
+          ),
+          ListTile(
+            title:Text("Other Products"),
+            onTap: () {
+            }
           ),
           ListTile(
             title:Text("About Us"),
