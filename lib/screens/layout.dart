@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_layout_grid/flutter_layout_grid.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sale_spree/components/item.dart';
 import 'details_screen.dart';
 
 class Layout extends StatefulWidget {
@@ -35,13 +35,13 @@ class _LayoutState extends State<Layout> {
 
                   ],
                   children: [
-                    getPlaceWidget("assets/2.svg","tag1","Service 1").withGridPlacement(
+                    getPlaceWidget("assets/2.svg","tag1","Service 1",item: items[0]).withGridPlacement(
                         rowStart: 0, columnStart: 0, rowSpan: 2),
-                    getPlaceWidget("assets/2.svg","tag2","Service 2").withGridPlacement(
+                    getPlaceWidget("assets/2.svg","tag2","Service 2",item: items[1]).withGridPlacement(
                         rowStart: 2, columnStart: 0, rowSpan: 1),
-                    getPlaceWidget("assets/2.svg","tag3","Service 3").withGridPlacement(
+                    getPlaceWidget("assets/2.svg","tag3","Service 3",item: items[2]).withGridPlacement(
                         rowStart: 0, columnStart: 1, rowSpan: 1),
-                    getPlaceWidget("assets/2.svg","tag4","Service 4").withGridPlacement(
+                    getPlaceWidget("assets/2.svg","tag4","Service 4",item: items[3]).withGridPlacement(
                         rowStart: 1, columnStart: 1, rowSpan: 2),
                   ],
                 ),
@@ -52,7 +52,7 @@ class _LayoutState extends State<Layout> {
       );
   }
 
-  Widget getPlaceWidget(imagePath,herotag,name) {
+  Widget getPlaceWidget(imagePath,herotag,name,{Item item}) {
     return GestureDetector(
       onTap: (){
         Navigator.push(context, MaterialPageRoute(
@@ -67,9 +67,10 @@ class _LayoutState extends State<Layout> {
             Hero(
               tag: herotag,
               child: ClipRRect(
-                child: SvgPicture.asset(
-                  imagePath,
-                  fit: BoxFit.cover,
+                child: Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(image: NetworkImage(item.imageUrl),fit: BoxFit.fitHeight)
+                  ),
                 ),
                 borderRadius: BorderRadius.circular(20),
               ),
@@ -82,7 +83,7 @@ class _LayoutState extends State<Layout> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    name,
+                    item.item,
                     style: GoogleFonts.poppins(
                       fontSize: 18,
                       color: Colors.white,
