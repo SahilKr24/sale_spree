@@ -3,14 +3,12 @@ import 'filler.dart';
 import 'onwatch.dart';
 import '../components/drawer.dart';
 import 'package:sale_spree/constants.dart';
-
+import 'layout.dart';
 
 int _currentIndex = 0;
 bool login = true;
 final List<Widget> _screen = [
-  Filler(
-    text: 'Main flex layout here',
-  ),
+  Layout(),
   Filler(
     text: 'Lifestyle items here',
   ),
@@ -119,7 +117,7 @@ class _NewHomeState extends State<NewHome> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => LoginPage()),
+                          MaterialPageRoute(builder: (context) =>Layout()),
                         );
                       },
                     ),
@@ -152,16 +150,7 @@ class _NewHomeState extends State<NewHome> {
               parent: this,
             ),
             Expanded(
-              child: SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(
-                      child: _screen[_currentIndex],
-                    ),
-                  ],
-                ),
-              ),
+              child: _screen[_currentIndex],
             ),
           ],
         ),
