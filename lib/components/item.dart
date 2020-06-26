@@ -20,7 +20,7 @@ class Item {
 var items = [
   Item(
       item: "OnePlus 8",
-      desc: "Lead with speed",
+      desc: "lead with speed",
       price: 42000,
       amazon: 41000,
       flipkart: 40000,
@@ -28,7 +28,7 @@ var items = [
     imageUrl: "https://i.guim.co.uk/img/media/bd6118679c80a512c39303d540a91e24f5f8b2fc/276_294_4335_2601/master/4335.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d99409a1554ff956f130e0243608ad0a"
   ),
   Item(
-      item: "OnePlus 8 pro",
+      item: "OnePlus 8 Pro",
       desc: "lead with more speed",
       price: 54000,
       amazon: 55000,
@@ -37,8 +37,8 @@ var items = [
     imageUrl: "https://c.ndtvimg.com/2020-04/o39rpsb8_gadgets-360_640x480_15_April_20.jpg?downsize=600:450"
   ),
   Item(
-    item: "Haylou gt1 case",
-    desc: "Cartoon case for earphones",
+    item: "Haylou GT 1 Case",
+    desc: "cartoon case for earphones",
     price: 1000,
     amazon: 3000,
     flipkart: 900,

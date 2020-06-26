@@ -1,2 +1,5 @@
+import 'package:flutter/cupertino.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-const String kFontStyle = 'fontfamily'; 
+const String kFontStyle = 'fontfamily';
+

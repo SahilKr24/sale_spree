@@ -14,7 +14,7 @@ class _LayoutState extends State<Layout> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
         width: double.infinity,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,7 +56,7 @@ class _LayoutState extends State<Layout> {
     return GestureDetector(
       onTap: (){
         Navigator.push(context, MaterialPageRoute(
-          builder: (context) => DetailScreen(imagePath,herotag,name)
+          builder: (context) => DetailScreen(imagePath,herotag,name,item: item)
         ));
       },
       child: Container(
@@ -77,19 +77,34 @@ class _LayoutState extends State<Layout> {
             ),
 
             Positioned(
-              top: 16,
-              left: 16,
+              bottom: 10,
+              left: 10,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     item.item,
                     style: GoogleFonts.poppins(
-                      fontSize: 18,
+                      fontSize: 20,
                       color: Colors.white,
                       fontWeight: FontWeight.w700,
                       shadows: <Shadow>[
-
+                        Shadow(offset: Offset(1.5,1.5),
+                        blurRadius: 4.0,
+                        color: Colors.black)
+                      ]
+                    ),
+                  ),
+                  Text(
+                    "₹ ${item.price}",
+                    style: GoogleFonts.poppins(
+                      fontSize: 14,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                      shadows: <Shadow>[
+                        Shadow(offset: Offset(1.5,1.5),
+                        blurRadius: 4.0,
+                        color: Colors.black)
                       ]
                     ),
                   ),

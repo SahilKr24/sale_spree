@@ -4,6 +4,8 @@ import 'onwatch.dart';
 import '../components/drawer.dart';
 import 'package:sale_spree/constants.dart';
 import 'layout.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:sale_spree/screens/loginpage.dart';
 
 int _currentIndex = 0;
 bool login = true;
@@ -51,10 +53,9 @@ class _MenuSelectorState extends State<MenuSelector> {
             child: Text(
               item,
               style: TextStyle(
-                fontFamily: kFontStyle,
                 color: _isSelected ? Colors.black : Colors.grey,
                 fontSize: _isSelected ? 20 : 16,
-                fontWeight: FontWeight.w700,
+                fontWeight: FontWeight.w600,
               ),
             ),
           ),
@@ -103,11 +104,7 @@ class _NewHomeState extends State<NewHome> {
                     padding: EdgeInsets.fromLTRB(10, 0, 0, 5),
                     child: Text(
                       login?'Welcome back,\nSahil':'Welcome,\nGuest',
-                      style: TextStyle(
-                        fontFamily: kFontStyle,
-                        fontSize: 30,
-                        fontWeight: FontWeight.w900,
-                      ),
+                      textScaleFactor: 2,
                     ),
                   ),
                   Hero(
@@ -117,7 +114,7 @@ class _NewHomeState extends State<NewHome> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) =>Layout()),
+                          MaterialPageRoute(builder: (context) =>LoginPage()),
                         );
                       },
                     ),

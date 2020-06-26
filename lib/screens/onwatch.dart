@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:sale_spree/constants.dart';
 
-class LoginPage extends StatefulWidget {
+class OnWatch extends StatefulWidget {
   @override
-  _LoginPageState createState() => new _LoginPageState();
+  _OnWatchState createState() => new _OnWatchState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _OnWatchState extends State<OnWatch> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
