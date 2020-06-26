@@ -125,11 +125,12 @@ class _NewHomeState extends State<NewHome> {
               padding: const EdgeInsets.symmetric(horizontal:30.0),
               child: TextField(
                     decoration: InputDecoration(
+                      icon: Icon(Icons.search),
                       labelText: 'Search',
                       labelStyle: TextStyle(
-                          fontFamily: 'Montserrat',
                           fontWeight: FontWeight.bold,
                           color: Colors.grey),
+                          focusColor: Colors.black,
                       focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.black,
@@ -139,25 +140,25 @@ class _NewHomeState extends State<NewHome> {
                   ),
             ),
             SizedBox(height: 10,),
-            Padding(
-              padding: EdgeInsets.fromLTRB(30, 0, 0, 2),
-              child: Row(
-                children: <Widget>[
-                  Text(
-                    'CATEGORIES  ',
-                    style: TextStyle(
-                      fontFamily: kFontStyle,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w900,
-                    ),
-                  ),
-                  Icon(
-                    Icons.arrow_downward,
-                    size: 16,
-                  ),
-                ],
-              ),
-            ),
+            // Padding(
+            //   padding: EdgeInsets.fromLTRB(30, 0, 0, 2),
+            //   child: Row(
+            //     children: <Widget>[
+            //       Text(
+            //         'CATEGORIES  ',
+            //         style: TextStyle(
+            //           fontFamily: kFontStyle,
+            //           fontSize: 16,
+            //           fontWeight: FontWeight.w900,
+            //         ),
+            //       ),
+            //       Icon(
+            //         Icons.arrow_downward,
+            //         size: 16,
+            //       ),
+            //     ],
+            //   ),
+            // ),
             MenuSelector(
               items: ['GENERAL', 'LIFESTYLE', 'CLOTHING', 'ELECTRONICS'],
               parent: this,
