@@ -56,7 +56,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     Container(
                       width: double.infinity,
                       padding: EdgeInsets.only(
-                          top: MediaQuery.of(context).size.height * 0.5 + 16,
+                          top: MediaQuery.of(context).size.height * 0.4 + 14,
                           bottom: 20,
                           right: 32,
                           left: 32),
@@ -111,7 +111,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         tag: widget.herotag,
                         child: Container(
                           width: double.infinity,
-                          height: MediaQuery.of(context).size.height * 0.5,
+                          height: MediaQuery.of(context).size.height * 0.4,
                           child: ClipRRect(
                             child: Container(
                               decoration: BoxDecoration(
@@ -128,7 +128,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       ),
                     ),
                     Positioned(
-                      top: 40,
+                      top: 30,
                       left: 10,
                       child: IconButton(
                         icon: Icon(
@@ -234,44 +234,39 @@ class _DetailScreenState extends State<DetailScreen> {
                       topRight: Radius.circular(60),
                     ),
                     color: Colors.white),
-                child: Row(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Like it?",
-                          style: GoogleFonts.poppins(
-                              fontSize: 16, fontWeight: FontWeight.w600),
-                        ),
-                        Container(
-                          height: 40.0,
-                          width: MediaQuery.of(context).size.width * 0.84,
-                          color: Colors.transparent,
-                          child: Container(
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                    color: Colors.black,
-                                    style: BorderStyle.solid,
-                                    width: 1.0),
-                                color: Colors.transparent,
-                                borderRadius: BorderRadius.circular(20.0)),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Center(
-                                  child: Text('BUY NOW',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'Montserrat')),
-                                )
-                              ],
-                            ),
-                          ),
-                        )
-                      ],
+                    Text(
+                      "Like it?",
+                      style: GoogleFonts.poppins(
+                          fontSize: 16, fontWeight: FontWeight.w600),
                     ),
-                    Spacer(),
+                    Container(
+                      height: 40.0,
+//                          width: MediaQuery.of(context).size.width * 0.84,
+                      color: Colors.transparent,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                color: Colors.black,
+                                style: BorderStyle.solid,
+                                width: 1.0),
+                            color: Colors.transparent,
+                            borderRadius: BorderRadius.circular(20.0)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Center(
+                              child: Text('BUY NOW',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'Montserrat')),
+                            )
+                          ],
+                        ),
+                      ),
+                    )
                   ],
                 ),
               )

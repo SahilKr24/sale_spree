@@ -25,7 +25,7 @@ class _OnWatchState extends State<OnWatch> {
                     'On Watch Stuff',
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 50.0,
+                        fontSize: MediaQuery.of(context).size.width * 0.08,
                         fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -43,7 +43,7 @@ class _OnWatchState extends State<OnWatch> {
                     },
                   ),
                 ),
-                Positioned(
+                Container(
                   child: Container(
                     padding: EdgeInsets.fromLTRB(25.0, 155.0, 0.0, 0.0),
                     child: Icon(Icons.shopping_cart, size: 35),
@@ -53,10 +53,10 @@ class _OnWatchState extends State<OnWatch> {
             ),
           ),
           SizedBox(height: 15.0),
-          SingleChildScrollView(
+          Container(
             child: Container(
               margin: EdgeInsets.symmetric(horizontal: 12),
-              height: MediaQuery.of(context).size.height * 0.7,
+              height: MediaQuery.of(context).size.height * 0.5,
               child: ListView.builder(
                   itemCount: _cart.length,
                   itemBuilder: (context, index) {
@@ -93,10 +93,9 @@ class _OnWatchState extends State<OnWatch> {
                                       fontSize: 22,
                                     ),
                                   ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
+                                  Spacer(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
                                         "₹ ${item.price}",
@@ -107,9 +106,6 @@ class _OnWatchState extends State<OnWatch> {
                                           color: Colors.red,
                                           fontSize: 18,
                                         ),
-                                      ),
-                                      SizedBox(
-                                        height: 3,
                                       ),
                                       Text(
                                         ", ₹ ${item.amazon}",
