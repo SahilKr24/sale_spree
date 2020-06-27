@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'filler.dart';
 import 'onwatch.dart';
 import '../components/drawer.dart';
-import 'package:sale_spree/constants.dart';
 import 'layout.dart';
 
 int _currentIndex = 0;
@@ -83,7 +82,7 @@ class NewHome extends StatefulWidget {
 }
 
 class _NewHomeState extends State<NewHome> {
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,10 +99,20 @@ class _NewHomeState extends State<NewHome> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                    child: Text(
-                      login ? 'Welcome back,\nSahil' : 'Welcome,\nGuest',
-                      textScaleFactor: 2,
+                    padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: Row(
+                      children: <Widget>[
+                        IconButton(
+                          icon: Icon(Icons.menu),
+                          onPressed: () {
+                            _scaffoldKey.currentState.openDrawer();
+                          },
+                        ),
+                        Text(
+                          login ? 'Welcome back,\nSahil' : 'Welcome,\nGuest',
+                          textScaleFactor: 2,
+                        ),
+                      ],
                     ),
                   ),
                   Hero(
@@ -122,24 +131,25 @@ class _NewHomeState extends State<NewHome> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal:30.0),
+              padding: const EdgeInsets.symmetric(horizontal: 30.0),
               child: TextField(
-                    decoration: InputDecoration(
-                      icon: Icon(Icons.search),
-                      labelText: 'Search',
-                      labelStyle: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.grey),
-                          focusColor: Colors.black,
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.black,
-                        ),
-                      ),
+                decoration: InputDecoration(
+                  icon: Icon(Icons.search),
+                  labelText: 'Search',
+                  labelStyle: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.grey),
+                  focusColor: Colors.black,
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.black,
                     ),
                   ),
+                ),
+              ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             // Padding(
             //   padding: EdgeInsets.fromLTRB(30, 0, 0, 2),
             //   child: Row(

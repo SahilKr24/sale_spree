@@ -62,24 +62,26 @@ var items = [
   )
 ];
 
-var citems = [
+var cart = [
   Item(
-      item: "Laptops",
-      desc: "Cheap laptops",
-      price: 100000,
-      snapdeal: 90000,
-      flipkart: 89000,
-      amazon: 91000,
-      imageUrl:
-      'https://image.freepik.com/free-vector/business-ad-banners_83728-2398.jpg'),
+    item: "Haylou GT 1 Case",
+    desc: "cartoon case for earphones",
+    price: 1000,
+    amazon: 3000,
+    flipkart: 900,
+    snapdeal: 50,
+    reviews: "nice case, fall and bump protection",
+    imageUrl: "https://ae01.alicdn.com/kf/Hb24082ac7a6e468dbcab736fc2363effx.jpg"
+  ),
   Item(
-      item: "Laptops",
-      desc: "Cheap laptops",
-      price: 100000,
-      snapdeal: 90000,
-      flipkart: 89000,
-      amazon: 91000,
-      imageUrl:
-      'https://image.freepik.com/free-psd/online-shopping-banner-concept_23-2148567672.jpg'),
+      item: "OnePl0x 8",
+      desc: "lead with speed",
+      price: 42000,
+      amazon: 41000,
+      flipkart: 40000,
+      snapdeal: 5000,
+      reviews : "so much speed its beyond my control",
+    imageUrl: "https://i.guim.co.uk/img/media/bd6118679c80a512c39303d540a91e24f5f8b2fc/276_294_4335_2601/master/4335.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d99409a1554ff956f130e0243608ad0a"
+  ),
 
 ];

@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -6,12 +5,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sale_spree/components/item.dart';
 
 class DetailScreen extends StatefulWidget {
-  final imagePath;
   final herotag;
-  final name;
   Item item;
 
-  DetailScreen(this.imagePath, this.herotag, this.name, {this.item});
+  DetailScreen(this.herotag, {this.item});
 
   @override
   _DetailScreenState createState() => _DetailScreenState();
@@ -212,10 +209,10 @@ class _DetailScreenState extends State<DetailScreen> {
                       style: GoogleFonts.poppins(
                           fontSize: 20, fontWeight: FontWeight.w600),
                     ),
-                    Icon(Icons.star,size: 14),
-                    Icon(Icons.star,size: 14),
-                    Icon(Icons.star,size: 14),
-                    Icon(Icons.star,size: 14),
+                    Icon(Icons.star, size: 14),
+                    Icon(Icons.star, size: 14),
+                    Icon(Icons.star, size: 14),
+                    Icon(Icons.star, size: 14),
                   ],
                 ),
               ),
@@ -249,7 +246,7 @@ class _DetailScreenState extends State<DetailScreen> {
                         ),
                         Container(
                           height: 40.0,
-                          width:  MediaQuery.of(context).size.width * 0.84 ,
+                          width: MediaQuery.of(context).size.width * 0.84,
                           color: Colors.transparent,
                           child: Container(
                             decoration: BoxDecoration(

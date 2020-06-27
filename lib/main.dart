@@ -13,12 +13,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.light,
         textTheme: TextTheme(
-          bodyText1:GoogleFonts.poppins(
-              fontWeight: FontWeight.w700),
-          bodyText2: GoogleFonts.poppins(
-              fontWeight: FontWeight.w700),
+          bodyText1: GoogleFonts.poppins(fontWeight: FontWeight.w700),
+          bodyText2: GoogleFonts.poppins(fontWeight: FontWeight.w700),
         ),
-
       ),
       // darkTheme: ThemeData(
       //   brightness: Brightness.dark,

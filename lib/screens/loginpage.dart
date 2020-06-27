@@ -128,26 +128,28 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(
                   height: 20.0,
                 ),
-                FadeAnimation(
-                  1,
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => NewHome()),
-                      );
-                    },
-                    child: Container(
-                      height: 50,
-                      margin: EdgeInsets.symmetric(horizontal: 60),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        color: Color.fromRGBO(49, 39, 79, 1),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Login",
-                          style: TextStyle(color: Colors.white),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => NewHome()),
+                    );
+                  },
+                  child: FadeAnimation(
+                    1,
+                    GestureDetector(
+                      child: Container(
+                        height: 50,
+                        margin: EdgeInsets.symmetric(horizontal: 60),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          color: Color.fromRGBO(49, 39, 79, 1),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Login",
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                       ),
                     ),
